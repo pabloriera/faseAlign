@@ -838,7 +838,9 @@ def main(args_wav, args_stereo, args_left, args_right, args_transcript, args_out
 
     if args_name is not None:  # override default output name
         if Path(args_name).suffix != '.TextGrid':
-            outname = args_name + '.TextGrid'
+            outname = args_name + '.TextGrid' 
+        else:
+            outname = args_name
     else:
         outname = basename + '_aligned.TextGrid'
 
